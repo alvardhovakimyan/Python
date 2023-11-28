@@ -4,14 +4,15 @@ write a function that returns the number of non-overlapping occurrences of subst
 i.e. write a function that does the same as a builtin str.count() function does
 function signature: count_sub_in_str(string_obj, substring)'''
 def count_sub_in_str(string_obj, substring):
-    count=0
-    start_index=0
-    while start_index < len(string_obj):
-        index = string_obj.find(substring, start_index)
-        if index == -1:
-            break
-        count += 1
-        start_index = index + 1
+    count = 0
+    len_substring = len(substring)
+    i = 0
+    while i <= len(string_obj) - len_substring:
+        if string_obj[i:i + len_substring] == substring:
+            count += 1
+            i += len_substring
+        else:
+            i += 1
     return count
 string_obj = str(input("Enter a word: "))
 substring = str(input("Enter searching combination: "))
