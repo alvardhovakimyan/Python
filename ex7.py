@@ -3,10 +3,11 @@ ex7
 write functions for the following string operations
 startswith(str_obj, sub_string)
 '''
+
+
 def starts_with(str_obj, sub_string):
     return str_obj[:len(sub_string)] == sub_string
 
-# Example usage:
 string_obj = str(input("Enter your text: "))
 substring = str(input("Enter substring: "))
 
