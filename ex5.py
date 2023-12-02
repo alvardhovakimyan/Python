@@ -7,9 +7,15 @@ For example, 545, is the palindrome numbers
 DO NOT use reverse builtin function.
 
 '''
-number = int(input("Enter a number: "))
-original_number = str(number)
-if original_number == original_number[::-1]:
-    print(f"{original_number} is a palindrome number.")
-else:
-    print(f"{original_number} isn't a palindrome number.")
+
+while True:
+    number = input("Enter a number: ")
+    if number.isdigit():
+        original_number = str(number)
+        if original_number == original_number[::-1]:
+            print(f"{original_number} is a palindrome number.")
+        else:
+            print(f"{original_number} isn't a palindrome number.")
+        break
+    else:
+        print("Invalid input. Please enter a valid number.")
