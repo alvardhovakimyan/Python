@@ -4,6 +4,8 @@ write functions for the following string operations
 is_in_str(str_obj, sub_string)
 
 '''
+
+
 def is_in_str(str_obj, sub_string):
     len_substring = len(sub_string)
     for i in range(len(str_obj) - len_substring + 1):
